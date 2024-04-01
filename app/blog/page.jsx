@@ -3,7 +3,7 @@ import FirstBlog from "@/components/FirstBlog";
 import OtherBlogs from "@/components/OtherBlogs";
 
 async function fetchBlogs() {
-  const res = await fetch("http://localhost:3000/api/blog", {
+  const res = await fetch("https://mkaidev-pro88.vercel.app/api/blog", {
     cache: "no-store",
   });
 

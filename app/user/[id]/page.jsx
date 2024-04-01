@@ -2,9 +2,12 @@ import React from "react";
 import ProfileDetails from "./ProfileDetails";
 
 async function getUserData(params) {
-  const res = await fetch(`http://localhost:3000/api/user/${params.id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://mkaidev-pro88.vercel.app/api/user/${params.id}`,
+    {
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

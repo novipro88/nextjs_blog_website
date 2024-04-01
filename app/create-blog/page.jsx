@@ -101,14 +101,17 @@ const CreateBlog = () => {
         authorId: session?.user?._id,
       };
 
-      const response = await fetch("http://localhost:3000/api/blog", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${session?.user?.accessToken}`,
-        },
-        method: "POST",
-        body: JSON.stringify(newBlog),
-      });
+      const response = await fetch(
+        "https://mkaidev-pro88.vercel.app/api/blog",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${session?.user?.accessToken}`,
+          },
+          method: "POST",
+          body: JSON.stringify(newBlog),
+        }
+      );
 
       if (response?.status === 201) {
         setSuccess("Blog created successfully.");

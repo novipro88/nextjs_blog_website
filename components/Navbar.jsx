@@ -18,7 +18,7 @@ const Navbar = () => {
   async function fetchUser() {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/user/${session?.user?._id}`
+        `https://mkaidev-pro88.vercel.app/api/user/${session?.user?._id}`
       );
 
       const resData = await res.json();

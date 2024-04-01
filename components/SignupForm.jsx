@@ -60,13 +60,16 @@ const SignupForm = () => {
         password,
       };
 
-      const response = await fetch("http://localhost:3000/api/signup", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify(newUser),
-      });
+      const response = await fetch(
+        "https://mkaidev-pro88.vercel.app/api/signup",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify(newUser),
+        }
+      );
 
       if (response?.status === 201) {
         setSuccess("Registration Successful");
